@@ -4,7 +4,7 @@ prolog-bits
 Prolog code snippets to make your life easier.
 
 words.pl
-===========
+-----------
 
 For one of my university courses, I had to do lexical analysis on sentences in order to perform corrections.
 This involved splitting a text file (more generally, a stream) to words-for-correction while maintaining other
