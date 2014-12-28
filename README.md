@@ -11,3 +11,10 @@ This involved splitting a text file (more generally, a stream) to words-for-corr
 things such as punctuation, digits etc.
 The predicate parseSentence/2 accepts a list of atom codes and performs this split, creating a list with tuples
 where the presence of a word is indicated by the 2nd element of the tuple.
+
+
+portcheck.pl
+------------
+
+A simple, threaded(!) ACK-response TCP port probe using the sockets library. Inspired by the 
+opening examples of the Violent Python book. 

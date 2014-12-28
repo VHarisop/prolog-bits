@@ -12,8 +12,8 @@
 probe_socket(Host, Port, Status) :- 
 	catch(setup_call_cleanup((tcp_socket(Socket), 
 									  Status = '[+]'), 
-							   		  tcp_connect(Socket, Host:Port),
-                     	       		  tcp_close_socket(Socket)), 
+									  tcp_connect(Socket, Host:Port),
+									  tcp_close_socket(Socket)), 
 									  _,
 									  Status = '[-]').
 /* create a threaded version for each socket
