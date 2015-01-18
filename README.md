@@ -13,6 +13,12 @@ The predicate parseSentence/2 accepts a list of atom codes and performs this spl
 where the presence of a word is indicated by the 2nd element of the tuple.
 
 
+edges.pl
+------------
+
+A simple set of predicates to extract edges from an adjacency matrix and construct adjacency lists.
+
+
 portcheck.pl
 ------------
 
