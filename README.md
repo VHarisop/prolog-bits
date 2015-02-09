@@ -19,6 +19,14 @@ edges.pl
 A simple set of predicates to extract edges from an adjacency matrix and construct adjacency lists.
 
 
+
+pyramid.pl
+------------
+
+Playing with Prolog when trying to answer a stackoverflow.com question. The result is this.
+
+
+
 portcheck.pl
 ------------
 
