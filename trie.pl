@@ -3,7 +3,7 @@ make_trie([Word|WordList], Trie) :-
 	make_trielist(Word, Word, WordTrie),
 	make_trie(WordList, [WordTrie], Trie).
 
-make_trie([], T, T).
+make_trie([], T, T) :- !.
 make_trie([Word|WordList], Trie, FinalTrie) :- 
 	insert_word_in_trie(Word, Word, Trie, NewTrie),
 	make_trie(WordList, NewTrie, FinalTrie).
@@ -24,7 +24,7 @@ insert_word_in_trie(Word, Leaf, Trie, NewTrie) :-
 
 insert_wordtrie_in_trie([H|[T]], 
 	[[H, Leaf | BT] | LT], [[H, Leaf | NB] | LT]) :-
-	atom(leaf), 
+	atom(Leaf), 
 	!, 
 	insert_wordtrie_in_trie(T, BT, NB).
 
