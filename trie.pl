@@ -39,3 +39,16 @@ insert_wordtrie_in_trie([H|T], [[HT | BT] | LT], [[HT | BT] | NB]) :-
 insert_wordtrie_in_trie(RW, RT, NB) :- 
 	append(RT, [RW], NB),
 	!.
+
+% search_trie(+Trie, +Word): searches a trie for a given word
+search_trie(Trie, Word) :- 
+	atom_chars(Word, Chars), 
+	search_trie(Trie, Chars, Word), !.
+
+% search_trie/3 finds matching letters until either
+% the trie is depleted or the word is found.
+search_trie([X], [], X) :- !.
+search_trie([T | _], [L | Ls], X) :-
+	T = [L | Rest], search_trie(Rest, Ls, X), !.
+search_trie([_ | Trie], [L | Ls], X) :-
+	search_trie(Trie, [L | Ls], X).
