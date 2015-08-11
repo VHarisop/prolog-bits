@@ -30,5 +30,5 @@ Playing with Prolog when trying to answer a stackoverflow.com question. The resu
 portcheck.pl
 ------------
 
-A simple, threaded(!) ACK-response TCP port probe using the sockets library. Inspired by the 
+A simple, threaded ACK-response TCP port probe using the sockets library. Inspired by the 
 opening examples of the Violent Python book. 
